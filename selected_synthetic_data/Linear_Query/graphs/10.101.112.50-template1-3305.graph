@@ -1,0 +1,27 @@
+graph {
+	"10.101.112.50-template1-3305-0" ["component"="0","numDouble"="4","numString"="4","tupleWidthOut"="11","instances"="[{outputRate=100.00449641829772, avgCPULoad=6.513652628831015, host=c14463aaaf8646eba708b2a04e0dc5bb}, {outputRate=100.00307443968018, avgCPULoad=6.445700768214622, host=c3e648a09f50414183e1f79bc3bef3c1}, {outputRate=100.01193904459254, avgCPULoad=6.513652393470023, host=c14463aaaf8646eba708b2a04e0dc5bb}, {outputRate=100.00969528182925, avgCPULoad=6.436552744078481, host=f4fd28e395a74667b9f69bed0b66fc95}, {outputRate=100.01049148446796, avgCPULoad=6.486006971184547, host=143ebf6429e24baeaa37c2f02403b7db}, {outputRate=100.00916894061764, avgCPULoad=6.436552812763027, host=f4fd28e395a74667b9f69bed0b66fc95}, {outputRate=100.01927584067072, avgCPULoad=6.30084638853534, host=3d3ee4188a954b56b840d391517095d3}, {outputRate=100.01683322664668, avgCPULoad=6.300846364248012, host=3d3ee4188a954b56b840d391517095d3}, {outputRate=100.26263764942625, avgCPULoad=6.486005620461508, host=143ebf6429e24baeaa37c2f02403b7db}, {outputRate=100.0843090428512, avgCPULoad=6.431111477110567, host=bc656ee32d6945629b86c08c35551814}]","parallelism"=10,"id"="10.101.112.50-template1-3305-0","operatorType"="SourceOperator","numInteger"="2","confEventRate"="1000"];
+	"10.101.112.50-template1-3305-1" ["instances"="[{outputRate=3.498352583321836, avgCPULoad=6.513659368974145, inputRate=155.5600782050443, host=c14463aaaf8646eba708b2a04e0dc5bb, realSelectivity=0.012681159420289854}, {outputRate=3.4651689576925824, avgCPULoad=6.4365531043911615, inputRate=160.03083176728342, host=f4fd28e395a74667b9f69bed0b66fc95, realSelectivity=0.013131313131313131}, {outputRate=4.497916811268931, avgCPULoad=6.445701910854218, inputRate=206.77090170914803, host=c3e648a09f50414183e1f79bc3bef3c1, realSelectivity=0.013106796116504855}, {outputRate=3.3653225118722805, avgCPULoad=6.48601002793145, inputRate=159.66955917714822, host=143ebf6429e24baeaa37c2f02403b7db, realSelectivity=0.013611859838274933}, {outputRate=3.6332661174257255, avgCPULoad=6.300849629631788, inputRate=166.59691793480528, host=3d3ee4188a954b56b840d391517095d3, realSelectivity=0.013292682926829268}, {outputRate=3.907926401455953, avgCPULoad=6.4860069004178, inputRate=171.94876166406195, host=143ebf6429e24baeaa37c2f02403b7db, realSelectivity=0.011857707509881424}]","slidingLength"="40","windowPolicy"="count","parallelism"=6,"avgRealSelectivity"="0.012946919823848912","aggClass"="Integer","windowType"="slidingWindow","windowLength"="100","component"="1","tupleWidthOut"="11","keyByClass"="Integer","id"="10.101.112.50-template1-3305-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="11","aggFunction"="sum"];
+	"c14463aaaf8646eba708b2a04e0dc5bb" ["host"="c14463aaaf8646eba708b2a04e0dc5bb","maxCPUFreq"="3407692000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="16"];
+	"c3e648a09f50414183e1f79bc3bef3c1" ["host"="c3e648a09f50414183e1f79bc3bef3c1","maxCPUFreq"="3061812000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="16"];
+	"f4fd28e395a74667b9f69bed0b66fc95" ["host"="f4fd28e395a74667b9f69bed0b66fc95","maxCPUFreq"="2498163000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="20"];
+	"143ebf6429e24baeaa37c2f02403b7db" ["host"="143ebf6429e24baeaa37c2f02403b7db","maxCPUFreq"="2698266000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="20"];
+	"3d3ee4188a954b56b840d391517095d3" ["host"="3d3ee4188a954b56b840d391517095d3","maxCPUFreq"="2425268000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="20"];
+	"bc656ee32d6945629b86c08c35551814" ["host"="bc656ee32d6945629b86c08c35551814","maxCPUFreq"="2761160000","operatorType"="PhysicalNode","totalMemory"="135133319168","networkLinkSpeed"="10000","physicalCPUCores"="20"];
+	"10.101.112.50-template1-3305-0" -- "10.101.112.50-template1-3305-1" ;
+	"10.101.112.50-template1-3305-0" -- "c14463aaaf8646eba708b2a04e0dc5bb" ["occurences"=2];
+	"c14463aaaf8646eba708b2a04e0dc5bb" -- "c3e648a09f50414183e1f79bc3bef3c1" ;
+	"10.101.112.50-template1-3305-0" -- "c3e648a09f50414183e1f79bc3bef3c1" ["occurences"=1];
+	"c3e648a09f50414183e1f79bc3bef3c1" -- "f4fd28e395a74667b9f69bed0b66fc95" ;
+	"10.101.112.50-template1-3305-0" -- "f4fd28e395a74667b9f69bed0b66fc95" ["occurences"=2];
+	"f4fd28e395a74667b9f69bed0b66fc95" -- "143ebf6429e24baeaa37c2f02403b7db" ;
+	"10.101.112.50-template1-3305-0" -- "143ebf6429e24baeaa37c2f02403b7db" ["occurences"=2];
+	"143ebf6429e24baeaa37c2f02403b7db" -- "3d3ee4188a954b56b840d391517095d3" ;
+	"10.101.112.50-template1-3305-0" -- "3d3ee4188a954b56b840d391517095d3" ["occurences"=2];
+	"3d3ee4188a954b56b840d391517095d3" -- "bc656ee32d6945629b86c08c35551814" ;
+	"10.101.112.50-template1-3305-0" -- "bc656ee32d6945629b86c08c35551814" ["occurences"=1];
+	"10.101.112.50-template1-3305-1" -- "c14463aaaf8646eba708b2a04e0dc5bb" ["occurences"=1];
+	"10.101.112.50-template1-3305-1" -- "f4fd28e395a74667b9f69bed0b66fc95" ["occurences"=1];
+	"10.101.112.50-template1-3305-1" -- "c3e648a09f50414183e1f79bc3bef3c1" ["occurences"=1];
+	"10.101.112.50-template1-3305-1" -- "143ebf6429e24baeaa37c2f02403b7db" ["occurences"=2];
+	"10.101.112.50-template1-3305-1" -- "3d3ee4188a954b56b840d391517095d3" ["occurences"=1];
+}

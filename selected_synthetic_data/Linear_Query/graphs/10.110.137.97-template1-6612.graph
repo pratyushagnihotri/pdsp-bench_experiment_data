@@ -1,0 +1,18 @@
+graph {
+	"10.110.137.97-template1-6612-0" ["component"="0","numDouble"="4","numString"="3","tupleWidthOut"="10","instances"="[{outputRate=309.59999567592007, avgCPULoad=11.69542472643304, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=309.89999345078013, avgCPULoad=11.695424761569246, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=303.86666129835567, avgCPULoad=11.95317402819401, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.05404527003424, avgCPULoad=12.0470298503562, host=b7cb721d3cfe4e8cb42d2911cd46b86c}, {outputRate=300.03598751648667, avgCPULoad=12.047029902254982, host=b7cb721d3cfe4e8cb42d2911cd46b86c}, {outputRate=300.04544686755406, avgCPULoad=11.953165600041144, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.0308643395477, avgCPULoad=11.953165582576935, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.0359673632667, avgCPULoad=11.69542814666143, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=300.03601005092605, avgCPULoad=11.6954281380931, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=300.0415976509532, avgCPULoad=11.709447476368009, host=484a065421ac46d7be426034478ab118}]","parallelism"=10,"id"="10.110.137.97-template1-6612-0","operatorType"="SourceOperator","numInteger"="2","confEventRate"="3000"];
+	"10.110.137.97-template1-6612-1" ["instances"="[{outputRate=19.018696876410488, avgCPULoad=11.95317429888971, inputRate=1483.2918178584732, host=84a44df599e344a2b1d848a8b30d1e28, realSelectivity=0.013333333333333334}, {outputRate=20.3854198740848, avgCPULoad=11.709452859086284, inputRate=1598.789841693337, host=484a065421ac46d7be426034478ab118, realSelectivity=0.013333333333333334}]","slidingLength"="75","windowPolicy"="count","parallelism"=2,"avgRealSelectivity"="0.013333333333333334","aggClass"="Integer","windowType"="tumblingWindow","windowLength"="75","component"="1","tupleWidthOut"="10","keyByClass"="Double","id"="10.110.137.97-template1-6612-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="10","aggFunction"="sum"];
+	"25f6a46528ce4340975692e6b0ec54b1" ["host"="25f6a46528ce4340975692e6b0ec54b1","maxCPUFreq"="984995000","operatorType"="PhysicalNode","totalMemory"="67306860544","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"84a44df599e344a2b1d848a8b30d1e28" ["host"="84a44df599e344a2b1d848a8b30d1e28","maxCPUFreq"="948067000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"b7cb721d3cfe4e8cb42d2911cd46b86c" ["host"="b7cb721d3cfe4e8cb42d2911cd46b86c","maxCPUFreq"="1200994000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"484a065421ac46d7be426034478ab118" ["host"="484a065421ac46d7be426034478ab118","maxCPUFreq"="1468898000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"10.110.137.97-template1-6612-0" -- "10.110.137.97-template1-6612-1" ;
+	"10.110.137.97-template1-6612-0" -- "25f6a46528ce4340975692e6b0ec54b1" ["occurences"=4];
+	"25f6a46528ce4340975692e6b0ec54b1" -- "84a44df599e344a2b1d848a8b30d1e28" ;
+	"10.110.137.97-template1-6612-0" -- "84a44df599e344a2b1d848a8b30d1e28" ["occurences"=3];
+	"84a44df599e344a2b1d848a8b30d1e28" -- "b7cb721d3cfe4e8cb42d2911cd46b86c" ;
+	"10.110.137.97-template1-6612-0" -- "b7cb721d3cfe4e8cb42d2911cd46b86c" ["occurences"=2];
+	"b7cb721d3cfe4e8cb42d2911cd46b86c" -- "484a065421ac46d7be426034478ab118" ;
+	"10.110.137.97-template1-6612-0" -- "484a065421ac46d7be426034478ab118" ["occurences"=1];
+	"10.110.137.97-template1-6612-1" -- "84a44df599e344a2b1d848a8b30d1e28" ["occurences"=1];
+	"10.110.137.97-template1-6612-1" -- "484a065421ac46d7be426034478ab118" ["occurences"=1];
+}

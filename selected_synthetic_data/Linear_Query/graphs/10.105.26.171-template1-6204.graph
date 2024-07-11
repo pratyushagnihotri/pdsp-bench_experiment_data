@@ -1,0 +1,23 @@
+graph {
+	"10.105.26.171-template1-6204-0" ["component"="0","numDouble"="3","numString"="1","tupleWidthOut"="8","instances"="[{outputRate=100.00965943295633, avgCPULoad=11.130818609999734, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=100.00532538035586, avgCPULoad=11.13081851698866, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=100.01406203519483, avgCPULoad=11.404128312533016, host=116cf0ee786f4402bde91969ef7940e9}, {outputRate=100.0156258896899, avgCPULoad=11.404128312533016, host=116cf0ee786f4402bde91969ef7940e9}, {outputRate=100.01076107723807, avgCPULoad=11.05401423404635, host=573f70697acd4d84915e3ca65ac9b6ed}, {outputRate=100.01638388387678, avgCPULoad=11.344243054708679, host=287d35cf9c7c48988d05444ff0cfdad2}, {outputRate=100.01443383466807, avgCPULoad=11.344243035840254, host=287d35cf9c7c48988d05444ff0cfdad2}, {outputRate=100.01598141816528, avgCPULoad=11.401594472913816, host=cb941d98134042f2bbcb5741dc739652}, {outputRate=100.01125493756139, avgCPULoad=11.526267914213035, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=100.01638968900467, avgCPULoad=11.526267888870011, host=6111db080ec6429990221e2f03d1baf1}]","parallelism"=10,"id"="10.105.26.171-template1-6204-0","operatorType"="SourceOperator","numInteger"="3","confEventRate"="1000"];
+	"10.105.26.171-template1-6204-1" ["instances"="[{outputRate=28.72504317678346, avgCPULoad=11.130822103577408, inputRate=1024.7138532569475, host=b42efeb0075e4a14b8f46bda908b5fe9, realSelectivity=0.009013494310815155}]","slidingLength"="900","windowPolicy"="duration","parallelism"=1,"avgRealSelectivity"="0.009013494310815155","aggClass"="Double","windowType"="slidingWindow","windowLength"="3000","component"="1","tupleWidthOut"="8","keyByClass"="Timestamp","id"="10.105.26.171-template1-6204-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="8","aggFunction"="sum"];
+	"b42efeb0075e4a14b8f46bda908b5fe9" ["host"="b42efeb0075e4a14b8f46bda908b5fe9","maxCPUFreq"="1076212000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"116cf0ee786f4402bde91969ef7940e9" ["host"="116cf0ee786f4402bde91969ef7940e9","maxCPUFreq"="1236756000","operatorType"="PhysicalNode","totalMemory"="67306868736","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"573f70697acd4d84915e3ca65ac9b6ed" ["host"="573f70697acd4d84915e3ca65ac9b6ed","maxCPUFreq"="1025200000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"287d35cf9c7c48988d05444ff0cfdad2" ["host"="287d35cf9c7c48988d05444ff0cfdad2","maxCPUFreq"="1788836000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"cb941d98134042f2bbcb5741dc739652" ["host"="cb941d98134042f2bbcb5741dc739652","maxCPUFreq"="1100167000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"6111db080ec6429990221e2f03d1baf1" ["host"="6111db080ec6429990221e2f03d1baf1","maxCPUFreq"="935041000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"10.105.26.171-template1-6204-0" -- "10.105.26.171-template1-6204-1" ;
+	"10.105.26.171-template1-6204-0" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=2];
+	"b42efeb0075e4a14b8f46bda908b5fe9" -- "116cf0ee786f4402bde91969ef7940e9" ;
+	"10.105.26.171-template1-6204-0" -- "116cf0ee786f4402bde91969ef7940e9" ["occurences"=2];
+	"116cf0ee786f4402bde91969ef7940e9" -- "573f70697acd4d84915e3ca65ac9b6ed" ;
+	"10.105.26.171-template1-6204-0" -- "573f70697acd4d84915e3ca65ac9b6ed" ["occurences"=1];
+	"573f70697acd4d84915e3ca65ac9b6ed" -- "287d35cf9c7c48988d05444ff0cfdad2" ;
+	"10.105.26.171-template1-6204-0" -- "287d35cf9c7c48988d05444ff0cfdad2" ["occurences"=2];
+	"287d35cf9c7c48988d05444ff0cfdad2" -- "cb941d98134042f2bbcb5741dc739652" ;
+	"10.105.26.171-template1-6204-0" -- "cb941d98134042f2bbcb5741dc739652" ["occurences"=1];
+	"cb941d98134042f2bbcb5741dc739652" -- "6111db080ec6429990221e2f03d1baf1" ;
+	"10.105.26.171-template1-6204-0" -- "6111db080ec6429990221e2f03d1baf1" ["occurences"=2];
+	"10.105.26.171-template1-6204-1" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=1];
+}

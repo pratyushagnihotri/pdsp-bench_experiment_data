@@ -1,0 +1,22 @@
+graph {
+	"10.105.26.171-template1-5429-0" ["component"="0","numDouble"="3","numString"="3","tupleWidthOut"="9","instances"="[{outputRate=100.0116671029896, avgCPULoad=11.158469156971465, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=100.00914137750692, avgCPULoad=11.158469084562942, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=100.01550563935966, avgCPULoad=11.369575966403838, host=287d35cf9c7c48988d05444ff0cfdad2}, {outputRate=100.00588116198935, avgCPULoad=11.369575995144823, host=287d35cf9c7c48988d05444ff0cfdad2}, {outputRate=100.24560989647807, avgCPULoad=11.391456978013045, host=cb941d98134042f2bbcb5741dc739652}, {outputRate=100.01150103548929, avgCPULoad=11.526959748172203, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=100.01416753271195, avgCPULoad=11.526959737765871, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=100.02101971735667, avgCPULoad=11.526959713844395, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=100.0242846573043, avgCPULoad=11.413413088841958, host=116cf0ee786f4402bde91969ef7940e9}, {outputRate=100.01279064224768, avgCPULoad=11.413413065725571, host=116cf0ee786f4402bde91969ef7940e9}]","parallelism"=10,"id"="10.105.26.171-template1-5429-0","operatorType"="SourceOperator","numInteger"="2","confEventRate"="1000"];
+	"10.105.26.171-template1-5429-1" ["instances"="[{outputRate=171.48009753817743, avgCPULoad=11.158469438802555, inputRate=332.74685087548465, host=b42efeb0075e4a14b8f46bda908b5fe9, realSelectivity=0.27030352748154224}, {outputRate=186.402311102045, avgCPULoad=11.369575995144823, inputRate=355.3710785379417, host=287d35cf9c7c48988d05444ff0cfdad2, realSelectivity=0.2766460706700135}, {outputRate=176.2752701031265, avgCPULoad=11.391456864663361, inputRate=320.2757030076001, host=cb941d98134042f2bbcb5741dc739652, realSelectivity=0.28829883467248446}]","slidingLength"="1000","windowPolicy"="duration","parallelism"=3,"avgRealSelectivity"="0.27841614427468003","aggClass"="Integer","windowType"="slidingWindow","windowLength"="2000","component"="1","tupleWidthOut"="9","keyByClass"="String","id"="10.105.26.171-template1-5429-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="9","aggFunction"="min"];
+	"b42efeb0075e4a14b8f46bda908b5fe9" ["host"="b42efeb0075e4a14b8f46bda908b5fe9","maxCPUFreq"="1317566000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"287d35cf9c7c48988d05444ff0cfdad2" ["host"="287d35cf9c7c48988d05444ff0cfdad2","maxCPUFreq"="1437172000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"cb941d98134042f2bbcb5741dc739652" ["host"="cb941d98134042f2bbcb5741dc739652","maxCPUFreq"="981475000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"6111db080ec6429990221e2f03d1baf1" ["host"="6111db080ec6429990221e2f03d1baf1","maxCPUFreq"="1808037000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"116cf0ee786f4402bde91969ef7940e9" ["host"="116cf0ee786f4402bde91969ef7940e9","maxCPUFreq"="976279000","operatorType"="PhysicalNode","totalMemory"="67306868736","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"10.105.26.171-template1-5429-0" -- "10.105.26.171-template1-5429-1" ;
+	"10.105.26.171-template1-5429-0" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=2];
+	"b42efeb0075e4a14b8f46bda908b5fe9" -- "287d35cf9c7c48988d05444ff0cfdad2" ;
+	"10.105.26.171-template1-5429-0" -- "287d35cf9c7c48988d05444ff0cfdad2" ["occurences"=2];
+	"287d35cf9c7c48988d05444ff0cfdad2" -- "cb941d98134042f2bbcb5741dc739652" ;
+	"10.105.26.171-template1-5429-0" -- "cb941d98134042f2bbcb5741dc739652" ["occurences"=1];
+	"cb941d98134042f2bbcb5741dc739652" -- "6111db080ec6429990221e2f03d1baf1" ;
+	"10.105.26.171-template1-5429-0" -- "6111db080ec6429990221e2f03d1baf1" ["occurences"=3];
+	"6111db080ec6429990221e2f03d1baf1" -- "116cf0ee786f4402bde91969ef7940e9" ;
+	"10.105.26.171-template1-5429-0" -- "116cf0ee786f4402bde91969ef7940e9" ["occurences"=2];
+	"10.105.26.171-template1-5429-1" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=1];
+	"10.105.26.171-template1-5429-1" -- "287d35cf9c7c48988d05444ff0cfdad2" ["occurences"=1];
+	"10.105.26.171-template1-5429-1" -- "cb941d98134042f2bbcb5741dc739652" ["occurences"=1];
+}

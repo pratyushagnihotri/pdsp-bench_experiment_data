@@ -1,0 +1,25 @@
+graph {
+	"10.105.26.171-template1-2832-0" ["component"="0","numDouble"="4","numString"="5","tupleWidthOut"="12","instances"="[{outputRate=1014.6998836139234, avgCPULoad=11.280515184200834, host=287d35cf9c7c48988d05444ff0cfdad2}, {outputRate=1007.6999486408927, avgCPULoad=11.25401073863482, host=cb941d98134042f2bbcb5741dc739652}, {outputRate=1010.1666123533752, avgCPULoad=11.506790242658392, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=1011.0666203598155, avgCPULoad=11.506790242658392, host=6111db080ec6429990221e2f03d1baf1}, {outputRate=1008.8666016956576, avgCPULoad=11.084962885469228, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=1017.1999188274465, avgCPULoad=10.999588341757574, host=573f70697acd4d84915e3ca65ac9b6ed}, {outputRate=1015.1998696483367, avgCPULoad=11.31873387787631, host=116cf0ee786f4402bde91969ef7940e9}, {outputRate=1000.9012362050257, avgCPULoad=11.085031810930431, host=b42efeb0075e4a14b8f46bda908b5fe9}, {outputRate=1000.6609533449648, avgCPULoad=11.31880520213899, host=116cf0ee786f4402bde91969ef7940e9}, {outputRate=1016.1120478366527, avgCPULoad=11.318739711491826, host=116cf0ee786f4402bde91969ef7940e9}]","parallelism"=10,"id"="10.105.26.171-template1-2832-0","operatorType"="SourceOperator","numInteger"="2","confEventRate"="10000"];
+	"10.105.26.171-template1-2832-1" ["instances"="[{outputRate=690.200553431389, avgCPULoad=11.506790335147686, inputRate=3466.0020547912777, host=6111db080ec6429990221e2f03d1baf1, realSelectivity=0.06736283934351567}, {outputRate=683.3026755077659, avgCPULoad=11.280514437295082, inputRate=3428.812225754154, host=287d35cf9c7c48988d05444ff0cfdad2, realSelectivity=0.06734998932308349}, {outputRate=653.6333448336554, avgCPULoad=11.084962885469228, inputRate=3280.997440415713, host=b42efeb0075e4a14b8f46bda908b5fe9, realSelectivity=0.06734655335221908}]","slidingLength"="5","windowPolicy"="count","parallelism"=3,"avgRealSelectivity"="0.06735312733960608","aggClass"="Integer","windowType"="slidingWindow","windowLength"="10","component"="1","tupleWidthOut"="12","keyByClass"="String","id"="10.105.26.171-template1-2832-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="12","aggFunction"="min"];
+	"287d35cf9c7c48988d05444ff0cfdad2" ["host"="287d35cf9c7c48988d05444ff0cfdad2","maxCPUFreq"="1571578000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"cb941d98134042f2bbcb5741dc739652" ["host"="cb941d98134042f2bbcb5741dc739652","maxCPUFreq"="1406215000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"6111db080ec6429990221e2f03d1baf1" ["host"="6111db080ec6429990221e2f03d1baf1","maxCPUFreq"="1329601000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"b42efeb0075e4a14b8f46bda908b5fe9" ["host"="b42efeb0075e4a14b8f46bda908b5fe9","maxCPUFreq"="1085436000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"573f70697acd4d84915e3ca65ac9b6ed" ["host"="573f70697acd4d84915e3ca65ac9b6ed","maxCPUFreq"="1031986000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"116cf0ee786f4402bde91969ef7940e9" ["host"="116cf0ee786f4402bde91969ef7940e9","maxCPUFreq"="1995274000","operatorType"="PhysicalNode","totalMemory"="67306868736","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"10.105.26.171-template1-2832-0" -- "10.105.26.171-template1-2832-1" ;
+	"10.105.26.171-template1-2832-0" -- "287d35cf9c7c48988d05444ff0cfdad2" ["occurences"=1];
+	"287d35cf9c7c48988d05444ff0cfdad2" -- "cb941d98134042f2bbcb5741dc739652" ;
+	"10.105.26.171-template1-2832-0" -- "cb941d98134042f2bbcb5741dc739652" ["occurences"=1];
+	"cb941d98134042f2bbcb5741dc739652" -- "6111db080ec6429990221e2f03d1baf1" ;
+	"10.105.26.171-template1-2832-0" -- "6111db080ec6429990221e2f03d1baf1" ["occurences"=2];
+	"6111db080ec6429990221e2f03d1baf1" -- "b42efeb0075e4a14b8f46bda908b5fe9" ;
+	"10.105.26.171-template1-2832-0" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=2];
+	"b42efeb0075e4a14b8f46bda908b5fe9" -- "573f70697acd4d84915e3ca65ac9b6ed" ;
+	"10.105.26.171-template1-2832-0" -- "573f70697acd4d84915e3ca65ac9b6ed" ["occurences"=1];
+	"573f70697acd4d84915e3ca65ac9b6ed" -- "116cf0ee786f4402bde91969ef7940e9" ;
+	"10.105.26.171-template1-2832-0" -- "116cf0ee786f4402bde91969ef7940e9" ["occurences"=3];
+	"10.105.26.171-template1-2832-1" -- "6111db080ec6429990221e2f03d1baf1" ["occurences"=1];
+	"10.105.26.171-template1-2832-1" -- "287d35cf9c7c48988d05444ff0cfdad2" ["occurences"=1];
+	"10.105.26.171-template1-2832-1" -- "b42efeb0075e4a14b8f46bda908b5fe9" ["occurences"=1];
+}

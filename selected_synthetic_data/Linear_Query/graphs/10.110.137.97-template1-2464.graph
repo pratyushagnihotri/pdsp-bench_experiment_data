@@ -1,0 +1,20 @@
+graph {
+	"10.110.137.97-template1-2464-0" ["component"="0","numDouble"="1","numString"="2","tupleWidthOut"="9","instances"="[{outputRate=308.1666481972122, avgCPULoad=11.704229449199936, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=300.03290369877146, avgCPULoad=11.70421856051027, host=25f6a46528ce4340975692e6b0ec54b1}, {outputRate=300.031760849246, avgCPULoad=11.924480194265152, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.03988807701745, avgCPULoad=11.924480074184768, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.03659883211236, avgCPULoad=11.924480060244447, host=84a44df599e344a2b1d848a8b30d1e28}, {outputRate=300.03270628463633, avgCPULoad=12.020802761473593, host=b7cb721d3cfe4e8cb42d2911cd46b86c}, {outputRate=300.04177820434785, avgCPULoad=12.020802808068796, host=b7cb721d3cfe4e8cb42d2911cd46b86c}, {outputRate=300.0416668927478, avgCPULoad=12.020802873180601, host=b7cb721d3cfe4e8cb42d2911cd46b86c}, {outputRate=300.0473738991281, avgCPULoad=11.636577478266894, host=484a065421ac46d7be426034478ab118}, {outputRate=300.0498944742347, avgCPULoad=11.63657732807748, host=484a065421ac46d7be426034478ab118}]","parallelism"=10,"id"="10.110.137.97-template1-2464-0","operatorType"="SourceOperator","numInteger"="5","confEventRate"="3000"];
+	"10.110.137.97-template1-2464-1" ["instances"="[{outputRate=305.77043762669376, avgCPULoad=11.704229457404972, inputRate=3086.0127577312887, host=25f6a46528ce4340975692e6b0ec54b1, realSelectivity=0.02937257345539951}]","slidingLength"="10","windowPolicy"="count","parallelism"=1,"avgRealSelectivity"="0.02937257345539951","aggClass"="Double","windowType"="slidingWindow","windowLength"="25","component"="1","tupleWidthOut"="9","keyByClass"="Integer","id"="10.110.137.97-template1-2464-1","operatorType"="WindowedAggregateOperator","tupleWidthIn"="9","aggFunction"="sum"];
+	"10.110.137.97-template1-2464-2" ["component"="1","tupleWidthOut"="9","instances"="[{outputRate=305.22203392439536, avgCPULoad=11.704229365948708, inputRate=305.42137344802074, host=25f6a46528ce4340975692e6b0ec54b1, realSelectivity=0.9993473294898292}]","filterClass"="Double","parallelism"=1,"avgRealSelectivity"="0.9993473294898292","id"="10.110.137.97-template1-2464-2","operatorType"="FilterOperator","filterFunction"="notEquals","tupleWidthIn"="9","literal"="0.01"];
+	"25f6a46528ce4340975692e6b0ec54b1" ["host"="25f6a46528ce4340975692e6b0ec54b1","maxCPUFreq"="1433732000","operatorType"="PhysicalNode","totalMemory"="67306860544","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"84a44df599e344a2b1d848a8b30d1e28" ["host"="84a44df599e344a2b1d848a8b30d1e28","maxCPUFreq"="1075321000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"b7cb721d3cfe4e8cb42d2911cd46b86c" ["host"="b7cb721d3cfe4e8cb42d2911cd46b86c","maxCPUFreq"="1797347000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"484a065421ac46d7be426034478ab118" ["host"="484a065421ac46d7be426034478ab118","maxCPUFreq"="1159404000","operatorType"="PhysicalNode","totalMemory"="67306872832","networkLinkSpeed"="10000","physicalCPUCores"="8"];
+	"10.110.137.97-template1-2464-0" -- "10.110.137.97-template1-2464-1" ;
+	"10.110.137.97-template1-2464-1" -- "10.110.137.97-template1-2464-2" ;
+	"10.110.137.97-template1-2464-0" -- "25f6a46528ce4340975692e6b0ec54b1" ["occurences"=2];
+	"25f6a46528ce4340975692e6b0ec54b1" -- "84a44df599e344a2b1d848a8b30d1e28" ;
+	"10.110.137.97-template1-2464-0" -- "84a44df599e344a2b1d848a8b30d1e28" ["occurences"=3];
+	"84a44df599e344a2b1d848a8b30d1e28" -- "b7cb721d3cfe4e8cb42d2911cd46b86c" ;
+	"10.110.137.97-template1-2464-0" -- "b7cb721d3cfe4e8cb42d2911cd46b86c" ["occurences"=3];
+	"b7cb721d3cfe4e8cb42d2911cd46b86c" -- "484a065421ac46d7be426034478ab118" ;
+	"10.110.137.97-template1-2464-0" -- "484a065421ac46d7be426034478ab118" ["occurences"=2];
+	"10.110.137.97-template1-2464-1" -- "25f6a46528ce4340975692e6b0ec54b1" ["occurences"=1];
+	"10.110.137.97-template1-2464-2" -- "25f6a46528ce4340975692e6b0ec54b1" ["occurences"=1];
+}
